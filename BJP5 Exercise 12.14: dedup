@@ -1,0 +1,10 @@
+public static String dedup (String a){
+    if(a.length()<2){
+        return a;
+    }else if (a.charAt(0)==a.charAt(1)){
+        return dedup(a.substring(1));
+    }
+    else {
+        return a.charAt(0) + dedup(a.substring(1));
+    }
+}
